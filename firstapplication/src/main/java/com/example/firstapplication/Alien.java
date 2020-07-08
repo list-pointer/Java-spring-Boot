@@ -5,11 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Alien {
-    @Autowired
-    laptop lap;
-
+//    @Autowired
+//    laptop lap;
+    int time;
     public void code(){
-//        System.out.println("Let's code.....");
-        lap.run();
+        System.out.println("Let's code.....");
+//        lap.run();
     }
 }
