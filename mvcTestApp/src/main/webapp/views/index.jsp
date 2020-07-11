@@ -13,11 +13,16 @@
 <form action="add" method="post">
     <label>Enter ID</label>
     <input type="text" name="id">
-    <br>
+    <br><br>
     <label>Enter Name </label>
     <input type="text" name="uname">
-    <br>
+    <br><br>
     <input type="submit">
+    <br><br>
+    <hr>
+    <br><br>
+    <label>Enter ID</label>
+    <input type="text" name="id">
 </form>
 </body>
 </html>
