@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Test Application Spring Boot MVC</h1>
-<form action="add" method="post">
+<form action="addAlien" method="post">
     <label>Enter ID</label>
     <input type="text" name="id">
     <br><br>
@@ -22,7 +22,7 @@
 </form>
 <hr>
 <br><br>
-<form action="getAlien" >
+<form action="getAlien" method="post">
     <label>Enter ID</label>
     <input type="text" name="id">
     <br><br>

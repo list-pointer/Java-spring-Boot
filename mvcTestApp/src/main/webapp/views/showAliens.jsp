@@ -9,6 +9,6 @@
     <title>Show Aliens Data</title>
 </head>
 <body>
-<h2>${alien}</h2>
+<h2>${infotable}</h2>
 </body>
 </html>

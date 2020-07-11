@@ -9,6 +9,6 @@
     <title>Result page</title>
 </head>
 <body>
-<h2>Result is : ${sum}</h2>
+<h2>${infotable}</h2>
 </body>
 </html>

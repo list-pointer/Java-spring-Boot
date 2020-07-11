@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
     @Autowired
-    AlienRepo repo;
+    infotablerepo repo;
     @RequestMapping("/")
     public String home()
     {
@@ -38,20 +38,32 @@ public class HomeController {
         return modelAndView;
     }
 
+    @PostMapping("addAlien")
+    public String addAlien(@ModelAttribute infotable i)
+    {
+//        ModelAndView modelAndView=new ModelAndView("result");
+////        modelAndView.setViewName("result");
+//        int sum=i+j;
+//        modelAndView.addObject("sum",sum);
+//        return modelAndView;
+//        repo.save(i);
+        repo.save(i);
+        return "result";
+    }
+
     @GetMapping("/getAliens")
     public String getAliens(Model model)
     {
 //        List<Alien> aliens= Arrays.asList(new Alien("101","Abhishek"),new Alien("102","Rahul"));
-        model.addAttribute("alien",repo.findAll());
-
+        model.addAttribute("infotable",repo.findAll());
         return "showAliens";
     }
 
-    @GetMapping("/getAlien")
+    @RequestMapping("/getAlien")
     public String getAlien(@RequestParam("id")int id, Model model)
     {
 //        List<Alien> aliens= Arrays.asList(new Alien("101","Abhishek"),new Alien("102","Rahul"));
-        model.addAttribute("alien",repo.getOne(id));
+        model.addAttribute("infotable",repo.getOne(id));
         return "showAliens";
     }
 
