@@ -59,11 +59,20 @@ public class HomeController {
         return "showAliens";
     }
 
+
     @RequestMapping("/getAlien")
     public String getAlien(@RequestParam("id")int id, Model model)
     {
 //        List<Alien> aliens= Arrays.asList(new Alien("101","Abhishek"),new Alien("102","Rahul"));
         model.addAttribute("infotable",repo.getOne(id));
+        return "showAliens";
+    }
+
+    @RequestMapping("/getAlienByName")
+    public String getAlienByName(@RequestParam("uname")String uname, Model model)
+    {
+//        List<Alien> aliens= Arrays.asList(new Alien("101","Abhishek"),new Alien("102","Rahul"));
+        model.addAttribute("infotable",repo.findByUname(uname));
         return "showAliens";
     }
 

@@ -28,5 +28,13 @@
     <br><br>
     <input type="submit">
 </form>
+<hr>
+<br><br>
+<form action="getAlienByName" method="post">
+    <label>Enter Name</label>
+    <input type="text" name="uname">
+    <br><br>
+    <input type="submit">
+</form>
 </body>
 </html>
