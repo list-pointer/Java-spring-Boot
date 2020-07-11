@@ -1,5 +1,6 @@
 package com.example.mvctestapp;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,8 @@ import java.util.List;
 
 @Controller
 public class HomeController {
+    @Autowired
+    AlienRepo repo;
     @RequestMapping("/")
     public String home()
     {
@@ -46,8 +49,9 @@ public class HomeController {
     @GetMapping("/getAliens")
     public String getAliens(Model model)
     {
-        List<Alien> aliens= Arrays.asList(new Alien("101","Abhishek"),new Alien("102","Rahul"));
-        model.addAttribute("aliens",aliens);
+//        List<Alien> aliens= Arrays.asList(new Alien("101","Abhishek"),new Alien("102","Rahul"));
+        model.addAttribute("alien",repo.findAll());
+
         return "showAliens";
     }
 

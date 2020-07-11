@@ -1,15 +1,24 @@
 package com.example.mvctestapp;
 
-public class Alien {
-    private String id;
-    private String name;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-    Alien(String id,String name)
+@Entity
+public class Alien {
+    @Id
+    private int id;
+    private String uname;
+
+    public Alien(){}
+
+    Alien(int id,String uname)
     {
         super();
         this.id=id;
-        this.name=name;
+        this.uname=uname;
     }
+
+
 
 //    public String getId() {
 //        return id;
@@ -29,6 +38,6 @@ public class Alien {
 
     public String toString()
     {
-        return "Alien [ID= "+id+" , name ="+name+" ]";
+        return "Alien [ID= "+id+" , name ="+uname+" ]";
     }
 }

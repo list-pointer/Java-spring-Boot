@@ -11,11 +11,11 @@
 <body>
 <h1>Test Application Spring Boot MVC</h1>
 <form action="add" method="post">
-    <label>Enter Number 1</label>
-    <input type="text" name="num1">
+    <label>Enter ID</label>
+    <input type="text" name="id">
     <br>
-    <label>Enter Number 2</label>
-    <input type="text" name="num2">
+    <label>Enter Name </label>
+    <input type="text" name="uname">
     <br>
     <input type="submit">
 </form>
