@@ -19,10 +19,14 @@
     <br><br>
     <input type="submit">
     <br><br>
-    <hr>
-    <br><br>
+</form>
+<hr>
+<br><br>
+<form action="getAlien" >
     <label>Enter ID</label>
     <input type="text" name="id">
+    <br><br>
+    <input type="submit">
 </form>
 </body>
 </html>

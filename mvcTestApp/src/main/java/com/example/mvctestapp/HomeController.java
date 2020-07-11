@@ -3,10 +3,7 @@ package com.example.mvctestapp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -47,6 +44,14 @@ public class HomeController {
 //        List<Alien> aliens= Arrays.asList(new Alien("101","Abhishek"),new Alien("102","Rahul"));
         model.addAttribute("alien",repo.findAll());
 
+        return "showAliens";
+    }
+
+    @GetMapping("/getAlien")
+    public String getAlien(@RequestParam("id")int id, Model model)
+    {
+//        List<Alien> aliens= Arrays.asList(new Alien("101","Abhishek"),new Alien("102","Rahul"));
+        model.addAttribute("alien",repo.getOne(id));
         return "showAliens";
     }
 
