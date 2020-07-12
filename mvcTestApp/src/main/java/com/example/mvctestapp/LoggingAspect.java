@@ -14,6 +14,6 @@ public class LoggingAspect {
     public void log()
     {
 //        System.out.println("Calling get Aliens");
-        logger.trace("Logger Called for getAliens");
+        logger.trace("Logger Called");
     }
 }
