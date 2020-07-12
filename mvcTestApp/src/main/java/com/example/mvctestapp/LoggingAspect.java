@@ -21,6 +21,6 @@ public class LoggingAspect {
     @After(value = "execution(public * com.example.mvctestapp.HomeController.getAliens())")
     public void logAfter() {
 //        System.out.println("Calling get Aliens");
-        logger.trace("Logger Called(After)");
+        logger.trace("Logger Called(After) ");
     }
 }
