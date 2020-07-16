@@ -1,14 +1,15 @@
 package com.example.mvctestapp;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
-@ResponseBody
+//This is only used when all the functions are rest functions
+@RestController
+//@ResponseBody
 public class ApiController {
     @Autowired
     infotablerepo infotablerepo;
@@ -17,5 +18,11 @@ public class ApiController {
     public List<infotable> getAliens() {
         List<infotable> infotableList = infotablerepo.findAll();
         return infotableList;
+    }
+
+    @GetMapping("/Alien/{id}")
+    public infotable getAlien(@PathVariable("id") int id) {
+        infotable info = infotablerepo.findById(id).orElse(new infotable());
+        return info;
     }
 }
